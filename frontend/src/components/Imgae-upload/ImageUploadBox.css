@@ -1,0 +1,45 @@
+.image-upload-box {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid red;
+    border-radius: 8px;
+    max-width: 400px;
+  }
+  
+  .image-upload-box h2 {
+    margin-bottom: 20px;
+  }
+  
+  .image-upload-box input[type="file"] {
+    margin-bottom: 10px;
+  }
+  
+  .image-upload-box .image-preview {
+    display: block;
+    margin: 10px 0;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .image-upload-box button {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .image-upload-box button:hover {
+    background-color: #218838;
+  }
+  
+  .image-upload-box .upload-message {
+    margin-top: 10px;
+    color: red;
+  }
+  

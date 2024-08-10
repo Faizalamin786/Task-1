@@ -1,0 +1,20 @@
+.Middle{
+    text-align: center;
+}
+.First{
+    text-align: center;
+}
+
+.Vid {
+    display: flex;
+    justify-content: center; /* Centers the items horizontally */
+    align-items: center; /* Centers the items vertically (if needed) */
+    gap: 750px; /* Adds a gap of 50px between the items */
+    margin-top: -55px;
+  }
+  .button-container {
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    margin-top: -95px; /* Add some space above the button */
+  }
+
