@@ -4,6 +4,10 @@ const bodyParser = require('body-parser');
 const app = express();
 const cors = require('cors'); // Import CORS module
 const path = require('path');
+
+require('dotenv').config(); // This should be at the very top of your main file
+
+
 // Middleware
 app.use(bodyParser.json());
 app.use(cors()); // Use CORS middleware
@@ -18,9 +22,9 @@ app.use(cors()); // Use CORS middleware
 
 
 // MongoDB Connection
-mongoose.connect('mongodb+srv://Faizal:Faizal786@faizal.atlxp5u.mongodb.net/login', {})
-.then(() => console.log('Connected to MongoDB'))
-.catch(err => console.error('Error connecting to MongoDB:', err));
+mongoose.connect(process.env.MONGO_URI, {})
+  .then(() => console.log('Connected to MongoDB'))
+  .catch(err => console.error('Error connecting to MongoDB:', err));
 
 // Routes
 const authRoutes = require('./auth/authRoutes');
@@ -45,7 +49,7 @@ app.get("*",(req, res) => {
 
 
 // Start Server
-const PORT = 5000;
+const PORT = process.env.PORT || 3000;;
 app.listen(PORT, () => {
   console.log(`Server is running on ${PORT}`);
 });
