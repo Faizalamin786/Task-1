@@ -12,7 +12,7 @@ const UserVideos = () => {
       loadingBarRef.current.continuousStart();
 
       try {
-        const response = await fetch(`https://task-1-0ob5.onrender.com/api/auth/videos/${username}`);
+        const response = await fetch(`https://task-1-0ob5.onrender.com/videos/${username}`);
         if (response.ok) {
           const data = await response.json();
           setVideos(data);

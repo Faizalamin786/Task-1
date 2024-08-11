@@ -49,7 +49,7 @@ const VideoUploadBox = ({ firstname }) => {
 
     try {
       loadingBarRef.current.continuousStart();
-      const response = await axios.post('https://task-1-0ob5.onrender.com/api/auth/uploadVideos', formData, {
+      const response = await axios.post('https://task-1-0ob5.onrender.com/uploadVideos', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         },

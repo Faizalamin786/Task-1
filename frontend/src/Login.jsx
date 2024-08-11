@@ -17,7 +17,7 @@ const Login = () => {
     loadingBarRef.current.continuousStart(); // Start loading bar
 
     try {
-      const response = await axios.post('https://task-1-0ob5.onrender.com/api/auth/login', { firstname, password });
+      const response = await axios.post('https://task-1-0ob5.onrender.com/login', { firstname, password });
 
       if (response.status === 200) {
         loadingBarRef.current.complete(); // Complete loading bar
