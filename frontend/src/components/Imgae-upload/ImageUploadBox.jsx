@@ -34,7 +34,7 @@ const ImageUploadBox = ({ firstname }) => {
 
     try {
       loadingBarRef.current.continuousStart();
-      const response = await axios.post('http://localhost:5000/api/auth/uploadProfileImage', formData, {
+      const response = await axios.post('https://task-1-0ob5.onrender.com/api/auth/uploadProfileImage', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         },

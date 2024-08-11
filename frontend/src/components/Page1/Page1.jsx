@@ -24,7 +24,7 @@ const Page1 = () => {
 
   const handleSaveBio = async (newBio) => {
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/user/updateBio', {
+      const response = await axios.post('https://task-1-0ob5.onrender.com/api/auth/user/updateBio', {
         email: user.email,
         bio: newBio,
       });

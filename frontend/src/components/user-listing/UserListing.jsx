@@ -13,7 +13,7 @@ const UserListing = () => {
       loadingBarRef.current.continuousStart();
 
       try {
-        const response = await axios.get('http://localhost:5000/api/auth/users');
+        const response = await axios.get('https://task-1-0ob5.onrender.com/api/auth/users');
         setUsers(response.data);
         loadingBarRef.current.complete();
       } catch (error) {
@@ -51,7 +51,7 @@ const UserCard = ({ user }) => {
   return (
     <div className="user-card">
       <img
-        src={`http://localhost:5000/api/auth/profile-image/${user._id}`}
+        src={`https://task-1-0ob5.onrender.com/api/auth/profile-image/${user._id}`}
         alt={`${user.firstname}'s profile`}
         className="profile-image"
       />
@@ -59,7 +59,7 @@ const UserCard = ({ user }) => {
       <div className="videos">
         {displayedVideos.map((video, index) => (
           <video key={index} controls width="200" height="200" className="video-item">
-            <source src={`http://localhost:5000/api/auth/video/${user._id}/${index}`} type={video.contentType} />
+            <source src={`https://task-1-0ob5.onrender.com/api/auth/video/${user._id}/${index}`} type={video.contentType} />
             Your browser does not support the video tag.
           </video>
         ))}

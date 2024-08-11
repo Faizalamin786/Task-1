@@ -45,7 +45,7 @@ app.get("*",(req, res) => {
 
 
 // Start Server
-const PORT = "https://task-1-0ob5.onrender.com/";
+const PORT = 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on ${PORT}`);
 });

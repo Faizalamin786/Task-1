@@ -39,7 +39,7 @@ const Signup = () => {
     loadingBarRef.current.continuousStart(); // Start loading bar
 
     try {
-      await axios.post('http://localhost:5000/api/auth/register', { firstname, lastname, email, number });
+      await axios.post('https://task-1-0ob5.onrender.com/api/auth/register', { firstname, lastname, email, number });
       loadingBarRef.current.complete(); // Complete loading bar
       toast.success('User created successfully');
       setTimeout(() => {
